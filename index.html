@@ -3,1185 +3,1591 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Amit Kumar Gupta - Professional Backend Developer specializing in Node.js, Python, Django, Flask, MongoDB, and MySQL. Building scalable server-side applications.">
-    <meta name="keywords" content="Backend Developer, Node.js Developer, Python Developer, MongoDB, MySQL, Django, Flask, API Development, Amit Kumar Gupta">
+    <meta name="description" content="Amit Kumar Gupta - Backend Developer specializing in Laravel, PHP, Node.js, MySQL. Building scalable fintech and SaaS applications.">
+    <meta name="keywords" content="Backend Developer, Laravel Developer, PHP Developer, MySQL, Node.js, Fintech, SaaS, API Development, Amit Kumar Gupta">
     <meta name="author" content="Amit Kumar Gupta">
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourportfolio.com/">
     <meta property="og:title" content="Amit Kumar Gupta | Backend Developer">
-    <meta property="og:description" content="Professional Backend Developer specializing in Node.js, Python, Django, Flask, MongoDB, and MySQL.">
+    <meta property="og:description" content="Backend Developer specializing in Laravel, PHP, Node.js, MySQL. Building scalable fintech and SaaS applications.">
     <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5603AQG0-V5mSCNZ8w/profile-displayphoto-shrink_800_800/B56ZcWtIeUGsAc-/0/1748432620584?e=1755734400&v=beta&t=58MmOjgKDGXxU5_1AmgTX90AYs5K65wT_uNF00gMgDw">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourportfolio.com/">
-    <meta property="twitter:title" content="Amit Kumar Gupta | Backend Developer">
-    <meta property="twitter:description" content="Professional Backend Developer specializing in Node.js, Python, Django, Flask, MongoDB, and MySQL.">
-    <meta property="twitter:image" content="https://media.licdn.com/dms/image/v2/D5603AQG0-V5mSCNZ8w/profile-displayphoto-shrink_800_800/B56ZcWtIeUGsAc-/0/1748432620584?e=1755734400&v=beta&t=58MmOjgKDGXxU5_1AmgTX90AYs5K65wT_uNF00gMgDw">
-
-    <title>Amit Kumar Gupta | Backend Developer | Node.js | Python | MongoDB</title>
+    <title>Amit Kumar Gupta | Backend Developer | Laravel | PHP | Node.js</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --secondary: #1e293b;
-            --accent: #3b82f6;
-            --light: #f8fafc;
-            --dark: #0f172a;
-            --text: #334155;
-            --text-light: #64748b;
-            --gray: #e2e8f0;
+            --primary: #1a56db;
+            --primary-dark: #1241a3;
+            --primary-glow: rgba(26, 86, 219, 0.18);
+            --accent: #f59e0b;
+            --accent2: #10b981;
+            --secondary: #0f1c3f;
+            --light: #f0f4ff;
+            --dark: #07102b;
+            --text: #2d3b5e;
+            --text-light: #6b7fa8;
+            --gray: #dde5f7;
+            --card-bg: #ffffff;
+            --tag-bg: #eef2ff;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            font-family: 'Sora', sans-serif;
             color: var(--text);
-            background-color: var(--light);
-            scroll-behavior: smooth;
+            background: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ─── HEADER ─── */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: linear-gradient(135deg, #0b1d4f 0%, #1a56db 60%, #1d6fe0 100%);
             color: white;
-            padding: 3rem 0 4rem;
+            padding: 4rem 0 5rem;
             position: relative;
             overflow: hidden;
         }
-        
-        .header-content {
-            display: flex;
+
+        header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,0.07) 0%, transparent 60%),
+                        radial-gradient(ellipse at 10% 80%, rgba(245,158,11,0.12) 0%, transparent 50%);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: var(--light);
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+
+        .header-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 3.5rem;
             align-items: center;
-            justify-content: space-between;
             position: relative;
             z-index: 2;
         }
-        
+
+        .profile-wrap {
+            position: relative;
+            display: inline-block;
+        }
+
         .profile-pic {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
+            width: 170px;
+            height: 170px;
+            border-radius: 20px;
             object-fit: cover;
-            border: 5px solid rgba(255,255,255,0.2);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid rgba(255,255,255,0.25);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 6px rgba(255,255,255,0.08);
+            transition: transform 0.4s;
+            display: block;
         }
-        
-        .profile-pic:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-        
-        .header-text {
-            flex: 1;
-            margin-left: 3rem;
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+
+        .profile-pic:hover { transform: scale(1.03) rotate(-1deg); }
+
+        .status-badge {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #07102b;
+            font-size: 0.7rem;
             font-weight: 700;
-            line-height: 1.2;
+            padding: 4px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
-        
+
+        .header-text h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.03em;
+        }
+
+        .header-text h1 span { color: var(--accent); }
+
         .title {
-            font-size: 1.4rem;
-            opacity: 0.9;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.4rem;
+            letter-spacing: 0.02em;
         }
-        
+
         .header-description {
-            font-size: 1.1rem;
-            max-width: 600px;
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.85);
+            max-width: 580px;
+            line-height: 1.75;
             margin-bottom: 2rem;
-            line-height: 1.7;
         }
-        
-        .social-links {
+
+        .header-pills {
             display: flex;
-            gap: 1.5rem;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
         }
-        
-        .social-links a {
+
+        .header-pill {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
             color: white;
-            font-size: 1.6rem;
-            transition: transform 0.3s, color 0.3s;
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 5px 14px;
+            border-radius: 30px;
+            backdrop-filter: blur(4px);
         }
-        
-        .social-links a:hover {
-            transform: translateY(-5px);
-            color: var(--accent);
-        }
-        
-        .cta-buttons {
+
+        .header-actions {
             display: flex;
             gap: 1rem;
-            margin-top: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        
+
         .btn {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.8rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.92rem;
             text-decoration: none;
-            transition: all 0.3s;
+            transition: all 0.25s;
+            cursor: pointer;
         }
-        
-        .btn-primary {
-            background-color: white;
+
+        .btn-white {
+            background: white;
             color: var(--primary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
-        
-        .btn-primary:hover {
-            background-color: var(--gray);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+        .btn-white:hover {
+            background: #f0f4ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
-        
-        .btn-outline {
-            border: 2px solid white;
+
+        .btn-ghost {
+            border: 1.5px solid rgba(255,255,255,0.4);
             color: white;
         }
-        
-        .btn-outline:hover {
-            background-color: rgba(255,255,255,0.1);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            transform: translateY(-2px);
         }
-        
-        /* Navigation */
+
+        .social-row {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-row a {
+            color: rgba(255,255,255,0.6);
+            font-size: 1.3rem;
+            transition: all 0.25s;
+        }
+
+        .social-row a:hover { color: white; transform: translateY(-3px); }
+
+        /* ─── NAV ─── */
         nav {
-            background-color: white;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray);
             position: sticky;
             top: 0;
             z-index: 100;
         }
-        
-        .nav-container {
+
+        .nav-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 0;
+            padding: 1rem 0;
         }
-        
+
         .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
+            font-weight: 800;
+            font-size: 1.3rem;
             color: var(--primary);
+            letter-spacing: -0.04em;
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
+            gap: 0.25rem;
         }
-        
-        .nav-links li {
-            margin-left: 2.5rem;
-        }
-        
+
         .nav-links a {
             text-decoration: none;
-            color: var(--secondary);
+            color: var(--text-light);
             font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-            font-size: 1.05rem;
+            font-size: 0.92rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
         }
-        
+
         .nav-links a:hover {
             color: var(--primary);
+            background: var(--primary-glow);
         }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            bottom: -5px;
-            left: 0;
-            transition: width 0.3s;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 5rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
+
+        /* ─── SECTIONS ─── */
+        section { padding: 5.5rem 0; }
+
+        .section-header { text-align: center; margin-bottom: 4rem; }
+
+        .section-label {
             display: inline-block;
-            position: relative;
-            font-weight: 600;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 1rem auto 0;
-            font-size: 1.1rem;
-        }
-        
-        /* About Section */
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .skills-container {
-            margin-top: 2.5rem;
-        }
-        
-        .skills-title {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .skill {
-            background-color: white;
-            color: var(--primary);
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.95rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
             font-weight: 500;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border: 1px solid var(--gray);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .skill:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        /* Experience Section */
-        .experience-container {
-            background-color: white;
-            border-radius: 10px;
-            padding: 3rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        
-        .experience-item {
-            display: flex;
-            margin-bottom: 3rem;
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .experience-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 2px;
-            height: 100%;
-            background-color: var(--primary);
-        }
-        
-        .experience-item::after {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 10px;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background-color: var(--primary);
-            border: 4px solid white;
-            box-shadow: 0 0 0 2px var(--primary);
-        }
-        
-        .experience-date {
-            min-width: 150px;
             color: var(--primary);
-            font-weight: 500;
-            margin-right: 2rem;
-        }
-        
-        .experience-content {
-            flex: 1;
-        }
-        
-        .experience-title {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-        }
-        
-        .experience-company {
-            font-size: 1.1rem;
-            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: var(--primary-glow);
+            padding: 5px 16px;
+            border-radius: 30px;
             margin-bottom: 1rem;
-            font-weight: 500;
         }
-        
-        .experience-description {
-            line-height: 1.8;
-        }
-        
-        .experience-description ul {
-            margin-top: 1rem;
-            padding-left: 1.5rem;
-        }
-        
-        .experience-description li {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-        
-        .project-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .project-img {
-            height: 220px;
-            background-color: #f1f5f9;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-img::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.3));
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .project-card:hover .project-img::after {
-            opacity: 1;
-        }
-        
-        .project-info {
-            padding: 1.8rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .project-info h3 {
-            margin-bottom: 0.8rem;
+
+        .section-header h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
             color: var(--dark);
-            font-size: 1.3rem;
+            letter-spacing: -0.04em;
+            margin-bottom: 0.8rem;
         }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.7rem;
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ─── ABOUT ─── */
+        #about { background: white; }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text);
             margin-bottom: 1.2rem;
         }
-        
-        .tech-tag {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 500;
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            margin-top: 2rem;
         }
-        
-        .project-description {
-            margin-bottom: 1.5rem;
+
+        .stat-card {
+            background: var(--light);
+            border: 1px solid var(--gray);
+            border-radius: 12px;
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .stat-card .num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .stat-card .label {
+            font-size: 0.78rem;
             color: var(--text-light);
-            line-height: 1.7;
-            flex: 1;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .project-links a {
-            text-decoration: none;
-            color: var(--primary);
+            margin-top: 0.3rem;
             font-weight: 500;
+        }
+
+        .skills-block h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .skills-block h3:first-child { margin-top: 0; }
+
+        .skills-cloud {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: color 0.3s;
+            flex-wrap: wrap;
+            gap: 0.6rem;
         }
-        
-        .project-links a:hover {
-            color: var(--primary-dark);
+
+        .skill-tag {
+            background: var(--tag-bg);
+            color: var(--primary);
+            border: 1px solid var(--gray);
+            padding: 5px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            cursor: default;
         }
-        
-        /* Contact Section */
-        .contact-container {
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .skill-tag.green { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+        .skill-tag.green:hover { background: var(--accent2); color: white; border-color: var(--accent2); }
+
+        .skill-tag.amber { background: #fffbeb; color: #92400e; border-color: #fde68a; }
+        .skill-tag.amber:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+        /* ─── EXPERIENCE ─── */
+        #experience { background: var(--light); }
+
+        .timeline { position: relative; }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+
+        .tl-item {
             display: flex;
-            gap: 3rem;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
         }
-        
-        .contact-info {
-            flex: 1;
-        }
-        
-        .contact-card {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            transition: transform 0.3s;
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background-color: rgba(59, 130, 246, 0.1);
-            border-radius: 50%;
+
+        .tl-dot {
+            width: 58px;
+            height: 58px;
+            flex-shrink: 0;
+            background: white;
+            border: 3px solid var(--primary);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--primary);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px var(--primary-glow);
+            z-index: 1;
+            transition: transform 0.2s;
         }
-        
-        .contact-details h3 {
-            margin-bottom: 0.3rem;
+
+        .tl-item:hover .tl-dot { transform: scale(1.08); }
+
+        .tl-card {
+            flex: 1;
+            background: white;
+            border: 1px solid var(--gray);
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            transition: box-shadow 0.25s, transform 0.25s;
+        }
+
+        .tl-item:hover .tl-card {
+            box-shadow: 0 8px 30px rgba(26,86,219,0.08);
+            transform: translateY(-2px);
+        }
+
+        .tl-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .tl-title {
+            font-size: 1.2rem;
+            font-weight: 700;
             color: var(--dark);
         }
-        
-        .contact-details p, .contact-details a {
+
+        .tl-date {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--primary);
+            background: var(--primary-glow);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .tl-company {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .tl-desc {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .tl-desc ul { padding-left: 1.2rem; }
+        .tl-desc li { margin-bottom: 0.4rem; }
+
+        .tl-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .tl-skill {
+            background: var(--tag-bg);
+            color: var(--primary);
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--gray);
+        }
+
+        /* ─── PROJECTS ─── */
+        #projects { background: white; }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-tab {
+            padding: 0.5rem 1.4rem;
+            border-radius: 10px;
+            border: 1.5px solid var(--gray);
+            background: white;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-tab:hover, .filter-tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid var(--gray);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(26,86,219,0.1);
+            border-color: var(--primary);
+        }
+
+        .project-banner {
+            height: 10px;
+        }
+
+        .project-banner.blue { background: linear-gradient(90deg, #1a56db, #3b82f6); }
+        .project-banner.green { background: linear-gradient(90deg, #10b981, #34d399); }
+        .project-banner.amber { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+        .project-banner.purple { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+        .project-banner.red { background: linear-gradient(90deg, #ef4444, #f87171); }
+        .project-banner.teal { background: linear-gradient(90deg, #0891b2, #22d3ee); }
+
+        .project-body {
+            padding: 1.6rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-icon.blue { background: #dbeafe; color: #1d4ed8; }
+        .project-icon.green { background: #d1fae5; color: #065f46; }
+        .project-icon.amber { background: #fef3c7; color: #92400e; }
+        .project-icon.purple { background: #ede9fe; color: #5b21b6; }
+        .project-icon.red { background: #fee2e2; color: #991b1b; }
+        .project-icon.teal { background: #cffafe; color: #155e75; }
+
+        .project-period {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.03em;
+        }
+
+        .project-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.02em;
+        }
+
+        .project-company {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 0.9rem;
+        }
+
+        .project-desc {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            flex: 1;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            background: var(--tag-bg);
+            color: var(--primary);
+            border: 1px solid var(--gray);
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray);
+        }
+
+        .project-link {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: gap 0.2s;
+        }
+
+        .project-link:hover { gap: 0.6rem; }
+
+        /* ─── CONTACT ─── */
+        #contact { background: var(--light); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-side h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.03em;
+        }
+
+        .contact-side p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.75;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            border: 1px solid var(--gray);
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s;
+        }
+
+        .contact-item:hover {
+            border-color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--primary-glow);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-info-text h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .contact-info-text a, .contact-info-text span {
+            font-size: 0.82rem;
             color: var(--text-light);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color 0.2s;
         }
-        
-        .contact-details a:hover {
-            color: var(--primary);
-        }
-        
-        .contact-form {
-            flex: 1;
-            background-color: white;
+
+        .contact-info-text a:hover { color: var(--primary); }
+
+        .contact-form-card {
+            background: white;
+            border: 1px solid var(--gray);
+            border-radius: 18px;
             padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        
-        .form-group {
-            margin-bottom: 1.8rem;
+
+        .contact-form-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
         }
-        
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+        .form-group { margin-bottom: 1.2rem; }
+
         .form-group label {
             display: block;
-            margin-bottom: 0.8rem;
-            font-weight: 500;
+            font-size: 0.82rem;
+            font-weight: 600;
             color: var(--dark);
+            margin-bottom: 0.5rem;
         }
-        
+
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 1rem;
-            border: 1px solid var(--gray);
-            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            border: 1.5px solid var(--gray);
+            border-radius: 10px;
             font-family: inherit;
-            transition: border-color 0.3s, box-shadow 0.3s;
+            font-size: 0.9rem;
+            color: var(--text);
+            transition: all 0.2s;
+            background: var(--light);
         }
-        
+
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+            background: white;
+            box-shadow: 0 0 0 3px var(--primary-glow);
         }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
+
+        .form-group textarea { min-height: 130px; resize: vertical; }
+
         .submit-btn {
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             border: none;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
+            padding: 0.9rem;
+            border-radius: 10px;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 0.95rem;
             cursor: pointer;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            width: 100%;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 3rem 0 2rem;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-about {
-            flex: 1;
-            margin-right: 2rem;
-        }
-        
-        .footer-about h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        
-        .footer-about p {
-            color: rgba(255,255,255,0.7);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-links {
-            flex: 1;
-        }
-        
-        .footer-links h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-        
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .footer-social a {
-            color: white;
-            font-size: 1.5rem;
-            transition: transform 0.3s, color 0.3s;
-        }
-        
-        .footer-social a:hover {
-            transform: translateY(-3px);
-            color: var(--accent);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.7);
-            font-size: 0.9rem;
-        }
-        
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary);
-            color: white;
-            border-radius: 50%;
+            transition: all 0.25s;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            gap: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(26,86,219,0.3);
+        }
+
+        .form-message {
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.88rem;
+            font-weight: 500;
+            display: none;
+        }
+
+        .form-message.success { background: #d1fae5; color: #065f46; display: block; }
+        .form-message.error { background: #fee2e2; color: #b91c1c; display: block; }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3.5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 3rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.03em;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.88rem;
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-col h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-col ul { list-style: none; }
+
+        .footer-col li { margin-bottom: 0.7rem; }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: white; }
+
+        .copyright {
+            text-align: center;
+            color: rgba(255,255,255,0.35);
+            font-size: 0.82rem;
+        }
+
+        /* ─── BACK TO TOP ─── */
+        .back-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 46px;
+            height: 46px;
+            background: var(--primary);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
             text-decoration: none;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(26,86,219,0.3);
             z-index: 99;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .back-to-top:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
-        }
-        /*Form Message */
-                .form-message {
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            display: none;
-        }
-        
-        .form-message.success {
-            background-color: #d1fae5;
-            color: #065f46;
-            display: block;
-        }
-        
-        .form-message.error {
-            background-color: #fee2e2;
-            color: #b91c1c;
-            display: block;
-        }
-        
-        /* Responsive Design */
+
+        .back-top.show { opacity: 1; visibility: visible; }
+        .back-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
+
+        /* ─── RESPONSIVE ─── */
         @media (max-width: 992px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .header-text {
-                margin-left: 0;
-                margin-top: 2.5rem;
-            }
-            
-            .social-links, .cta-buttons {
-                justify-content: center;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .contact-container {
-                flex-direction: column;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-            }
-            
-            .footer-about {
-                margin-right: 0;
-                margin-bottom: 2rem;
-            }
+            .header-grid { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .header-actions { justify-content: center; }
+            .header-pills { justify-content: center; }
+            .social-row { justify-content: center; }
         }
-        
+
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .title {
-                font-size: 1.2rem;
-            }
-            
-            .nav-container {
-                flex-direction: column;
-            }
-            
-            .nav-links {
-                margin-top: 1.5rem;
-            }
-            
-            .nav-links li {
-                margin-left: 1.2rem;
-                margin-right: 1.2rem;
-            }
-            
-            .experience-item {
-                flex-direction: column;
-            }
-            
-            .experience-date {
-                margin-bottom: 1rem;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+            .header-text h1 { font-size: 2rem; }
+            .section-header h2 { font-size: 1.8rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .nav-links { gap: 0; }
+            .nav-links a { padding: 0.5rem 0.7rem; font-size: 0.85rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: 1fr 1fr 1fr; }
         }
-        
-        @media (max-width: 576px) {
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
+
+        @media (max-width: 480px) {
+            .stats-row { grid-template-columns: 1fr; }
+            .tl-item { flex-direction: column; }
+            .timeline::before { display: none; }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container header-content">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQG0-V5mSCNZ8w/profile-displayphoto-shrink_800_800/B56ZcWtIeUGsAc-/0/1748432620584?e=1755734400&v=beta&t=58MmOjgKDGXxU5_1AmgTX90AYs5K65wT_uNF00gMgDw" alt="Amit Kumar Gupta" class="profile-pic">
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<header>
+    <div class="container">
+        <div class="header-grid">
+            <div class="profile-wrap">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQG0-V5mSCNZ8w/profile-displayphoto-shrink_800_800/B56ZcWtIeUGsAc-/0/1748432620584?e=1755734400&v=beta&t=58MmOjgKDGXxU5_1AmgTX90AYs5K65wT_uNF00gMgDw" alt="Amit Kumar Gupta" class="profile-pic">
+                <span class="status-badge">🟢 Open to Work</span>
+            </div>
             <div class="header-text">
-                <h1>Amit Kumar Gupta</h1>
-                <p class="title">Backend Developer | Node.js | Python | Django | Flask | MongoDB | MySQL</p>
-                <p class="header-description">I design and build scalable backend systems with clean, efficient code. Passionate about creating robust APIs and optimizing database performance for high-traffic applications.</p>
-                <div class="social-links">
+                <h1>Amit Kumar <span>Gupta</span></h1>
+                <p class="title">// Backend Developer · Laravel · PHP · Node.js · MySQL</p>
+                <p class="header-description">4+ years building scalable fintech & SaaS backends — from AEPS payment systems to multi-role CRM platforms. Clean code, solid architecture, real-world impact.</p>
+                <div class="header-pills">
+                    <span class="header-pill">Laravel / PHP</span>
+                    <span class="header-pill">Fintech APIs</span>
+                    <span class="header-pill">Role-Based Auth</span>
+                    <span class="header-pill">MySQL Schema Design</span>
+                    <span class="header-pill">SaaS Platforms</span>
+                </div>
+                <div class="header-actions">
+                    <a href="#contact" class="btn btn-white"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                    <a href="#projects" class="btn btn-ghost"><i class="fas fa-code"></i> View Projects</a>
+                </div>
+                <div class="social-row">
                     <a href="https://www.linkedin.com/in/backend-developer-amit" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="mailto:akoffice2026@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Contact Me</a>
-                    <a href="#projects" class="btn btn-outline">View Projects</a>
-                </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
-            <div class="logo">AKG</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<nav>
+    <div class="container nav-inner">
+        <div class="logo">AKG</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- About Section -->
-    <section id="about" class="container">
-        <div class="section-title">
+<!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+<section id="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Who I Am</span>
             <h2>About Me</h2>
-            <p class="section-subtitle">Get to know more about my skills and expertise</p>
+            <p>Backend engineer who loves turning complex business logic into clean, maintainable systems.</p>
         </div>
-        <div class="about-content">
+        <div class="about-grid">
             <div class="about-text">
-                <p>I'm a dedicated backend developer with a strong foundation in computer science and extensive experience in building scalable server-side applications. My journey in software development has equipped me with the ability to design efficient systems that handle complex business logic while maintaining performance.</p>
-                <p>My expertise lies in JavaScript (Node.js) and Python ecosystems, where I've built RESTful APIs, microservices architectures, and database solutions. I'm particularly passionate about optimizing application performance and implementing best practices in code organization and system design.</p>
-                <p>What sets me apart is my problem-solving approach - I don't just write code, I architect solutions that are maintainable, scalable, and efficient. I thrive in collaborative environments and enjoy mentoring junior developers while continuously learning from senior team members.</p>
-                
-                <div class="skills-container">
-                    <h3 class="skills-title">Technical Skills</h3>
-                    <div class="skills">
-                        <span class="skill">Node.js</span>
-                        <span class="skill">Express.js</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">Django</span>
-                        <span class="skill">Flask</span>
-                        <span class="skill">MongoDB</span>
-                        <span class="skill">MySQL</span>
-                        <span class="skill">PostgreSQL</span>
-                        <span class="skill">RESTful APIs</span>
-                        <span class="skill">GraphQL</span>
-                        <span class="skill">Docker</span>
-                        <span class="skill">AWS</span>
-                        <span class="skill">Microservices</span>
-                        <span class="skill">Redis</span>
-                        <span class="skill">Git</span>
-                        <span class="skill">CI/CD</span>
-                        <span class="skill">Jest</span>
-                        <span class="skill">Pytest</span>
+                <p>I'm a backend developer with 4+ years of hands-on experience building fintech and SaaS platforms using Laravel and PHP. My work spans everything from AEPS, DMT, recharge, and travel API integrations to complex role-based admin panels for distributors, retailers, and API partners.</p>
+                <p>I design robust MySQL schemas, implement secure authentication flows with OTP and session management, and ensure code quality using Laravel Pint, PHPStan, and SonarQube. Currently focused on converting traditional PHP systems into structured, scalable Laravel architectures.</p>
+                <p>Beyond fintech, I've shipped 10+ projects across healthcare, e-commerce, community platforms, and security SaaS — each one a chance to solve a real problem with clean engineering.</p>
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="num">4+</div>
+                        <div class="label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="num">10+</div>
+                        <div class="label">Projects Shipped</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="num">200+</div>
+                        <div class="label">APIs Built</div>
                     </div>
                 </div>
             </div>
+            <div class="skills-block">
+                <h3>Backend & Frameworks</h3>
+                <div class="skills-cloud">
+                    <span class="skill-tag">Laravel</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Queue / Jobs</span>
+                </div>
+                <h3>Database & Storage</h3>
+                <div class="skills-cloud">
+                    <span class="skill-tag green">MySQL</span>
+                    <span class="skill-tag green">MongoDB</span>
+                    <span class="skill-tag green">Redis</span>
+                    <span class="skill-tag green">Schema Design</span>
+                </div>
+                <h3>Fintech Specialisation</h3>
+                <div class="skills-cloud">
+                    <span class="skill-tag amber">AEPS</span>
+                    <span class="skill-tag amber">DMT</span>
+                    <span class="skill-tag amber">Recharge APIs</span>
+                    <span class="skill-tag amber">Travel APIs</span>
+                    <span class="skill-tag amber">Insurance</span>
+                    <span class="skill-tag amber">Wallet Logic</span>
+                </div>
+                <h3>Tools & Quality</h3>
+                <div class="skills-cloud">
+                    <span class="skill-tag">Laravel Pint</span>
+                    <span class="skill-tag">PHPStan</span>
+                    <span class="skill-tag">SonarQube</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AJAX / JS</span>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="container">
-        <div class="section-title">
+<!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+<section id="experience">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Career</span>
             <h2>Professional Experience</h2>
-            <p class="section-subtitle">My career journey and professional achievements</p>
+            <p>A track record of shipping real products at scale across fintech, SaaS, and enterprise domains.</p>
         </div>
-        <div class="experience-container">
-            <div class="experience-item">
-                <div class="experience-date">2021 - Present</div>
-                <div class="experience-content">
-                    <h3 class="experience-title">Backend Developer</h3>
-                    <p class="experience-company">Tech Solutions Inc.</p>
-                    <div class="experience-description">
-                        <p>Developed and maintained scalable backend services for enterprise applications serving over 500,000 users. Led the migration from monolithic to microservices architecture, improving system reliability and deployment frequency.</p>
-                        <ul>
-                            <li>Implemented RESTful APIs with Node.js and Express that reduced response times by 40%</li>
-                            <li>Optimized MongoDB queries and indexing strategies, improving query performance by 60%</li>
-                            <li>Designed authentication system using JWT and OAuth 2.0 for secure API access</li>
-                            <li>Mentored 3 junior developers in backend best practices and code reviews</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="experience-date">2019 - 2021</div>
-                <div class="experience-content">
-                    <h3 class="experience-title">Python Developer</h3>
-                    <p class="experience-company">Data Systems Ltd.</p>
-                    <div class="experience-description">
-                        <p>Built data processing pipelines and backend services for financial applications using Python and Django. Collaborated with data science team to implement machine learning models in production.</p>
-                        <ul>
-                            <li>Developed Django REST Framework APIs for financial data analysis platform</li>
-                            <li>Implemented Celery for asynchronous task processing, reducing main thread workload</li>
-                            <li>Designed database schemas and optimized SQL queries for complex financial reports</li>
-                            <li>Created automated testing suite with 85% code coverage using Pytest</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="experience-date">2018 - 2019</div>
-                <div class="experience-content">
-                    <h3 class="experience-title">Software Engineer Intern</h3>
-                    <p class="experience-company">StartUp Ventures</p>
-                    <div class="experience-description">
-                        <p>Assisted in developing backend services and learned industry best practices in software development. Gained hands-on experience with full development lifecycle in agile environment.</p>
-                        <ul>
-                            <li>Contributed to API development for mobile applications using Node.js</li>
-                            <li>Implemented database migration scripts for schema changes</li>
-                            <li>Participated in code reviews and sprint planning meetings</li>
-                            <li>Fixed critical bugs in production systems under senior developer guidance</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="timeline">
 
-    <!-- Projects Section -->
-    <section id="projects" class="container">
-        <div class="section-title">
+            <div class="tl-item">
+                <div class="tl-dot"><i class="fas fa-building"></i></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <div>
+                            <div class="tl-title">Backend Developer — Fintech</div>
+                            <div class="tl-company">Current Company · Prayagraj, UP</div>
+                        </div>
+                        <span class="tl-date">2024 – Present</span>
+                    </div>
+                    <div class="tl-desc">
+                        <p>Building and maintaining Laravel-based fintech platform covering AEPS, DMT, recharge, travel, and insurance services. Architecting role-based systems for retailers, distributors, master distributors, and API partners.</p>
+                        <ul>
+                            <li>Designed complex MySQL schemas for KYC, wallet, and transaction management</li>
+                            <li>Implemented secure OTP login, session handling, and permission-based access control</li>
+                            <li>Enforcing code quality with Laravel Pint, PHPStan, and SonarQube pipelines</li>
+                            <li>Integrating third-party fintech APIs and managing webhook flows</li>
+                        </ul>
+                    </div>
+                    <div class="tl-skills">
+                        <span class="tl-skill">Laravel</span><span class="tl-skill">PHP</span><span class="tl-skill">MySQL</span><span class="tl-skill">AEPS</span><span class="tl-skill">DMT</span><span class="tl-skill">PHPStan</span><span class="tl-skill">SonarQube</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"><i class="fas fa-laptop-code"></i></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <div>
+                            <div class="tl-title">Backend Developer</div>
+                            <div class="tl-company">HindtechItSolutions</div>
+                        </div>
+                        <span class="tl-date">Oct 2023 – Aug 2024</span>
+                    </div>
+                    <div class="tl-desc">
+                        <p>Delivered multiple client projects including a Canadian security SaaS, e-commerce management platform, and a spiritual services app (Pujari Ji). Handled full backend development and API architecture.</p>
+                        <ul>
+                            <li>Built Canada Boos Security with Google Maps, Firebase notifications, cron jobs, and real-time APIs</li>
+                            <li>Developed e-commerce management app with order tracking and admin panel filters</li>
+                            <li>Created Pujari Ji — spiritual services app with pooja booking, astrology, and Panchang</li>
+                        </ul>
+                    </div>
+                    <div class="tl-skills">
+                        <span class="tl-skill">Laravel</span><span class="tl-skill">PHP</span><span class="tl-skill">Firebase</span><span class="tl-skill">Google Maps API</span><span class="tl-skill">MySQL</span><span class="tl-skill">Cron Jobs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"><i class="fas fa-code"></i></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <div>
+                            <div class="tl-title">PHP / Laravel Developer</div>
+                            <div class="tl-company">Mind You Infotech Private Limited</div>
+                        </div>
+                        <span class="tl-date">May 2022 – Sep 2023</span>
+                    </div>
+                    <div class="tl-desc">
+                        <p>Built 7+ diverse products from scratch — community platforms, healthcare booking, CRM, project management, vendor tools, and construction portals. Wrote 200+ APIs across these projects.</p>
+                        <ul>
+                            <li>Community app with 200+ APIs — news, events, blood donation, matrimony, Firebase notifications</li>
+                            <li>Doctor Appointment system using Laravel queues for bulk cancellations and rescheduling</li>
+                            <li>CRM with HR, accounts, billing modules; Short-X vendor WhatsApp order management</li>
+                        </ul>
+                    </div>
+                    <div class="tl-skills">
+                        <span class="tl-skill">Laravel</span><span class="tl-skill">PHP</span><span class="tl-skill">MySQL</span><span class="tl-skill">Firebase</span><span class="tl-skill">CRM</span><span class="tl-skill">REST APIs</span><span class="tl-skill">AJAX</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+<section id="projects">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Work</span>
             <h2>Featured Projects</h2>
-            <p class="section-subtitle">Some of my recent work and contributions</p>
+            <p>Real products shipped across fintech, healthcare, security SaaS, e-commerce, and community platforms.</p>
         </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="project-info">
-                    <h3>E-commerce API Platform</h3>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Redis</span>
-                    </div>
-                    <p class="project-description">A comprehensive backend system for e-commerce applications featuring product management, user authentication, payment processing, and order fulfillment. Built with microservices architecture for scalability.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> View Code</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="project-info">
-                    <h3>Data Analytics Dashboard</h3>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Chart.js</span>
-                    </div>
-                    <p class="project-description">Backend system for processing and visualizing large datasets with custom analytics capabilities. Features data aggregation pipelines and real-time updates through WebSockets.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> View Code</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="project-info">
-                    <h3>Authentication Service</h3>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">JWT</span>
-                        <span class="tech-tag">OAuth 2.0</span>
-                        <span class="tech-tag">Redis</span>
-                    </div>
-                    <p class="project-description">Centralized authentication service with support for multiple strategies (JWT, OAuth, API keys). Features rate limiting, brute force protection, and detailed audit logging.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> View Code</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <div class="section-title">
-            <h2>Get In Touch</h2>
-            <p class="section-subtitle">Feel free to reach out for collaborations or just a friendly hello</p>
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All Projects</button>
+            <button class="filter-tab" data-filter="fintech">Fintech</button>
+            <button class="filter-tab" data-filter="saas">SaaS</button>
+            <button class="filter-tab" data-filter="ecommerce">E-Commerce</button>
+            <button class="filter-tab" data-filter="community">Community</button>
         </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <!-- [Previous contact cards remain the same] -->
+
+        <div class="projects-grid">
+
+            <!-- Canada Boots Security -->
+            <div class="project-card" data-category="saas">
+                <div class="project-banner blue"></div>
+                <div class="project-body">
+                    <div class="project-icon blue"><i class="fas fa-shield-alt"></i></div>
+                    <div class="project-period">Feb 2024 – Aug 2024 · HindtechItSolutions</div>
+                    <div class="project-name">Canada Boots Security</div>
+                    <div class="project-company">Security Agency SaaS · Ontario, Canada</div>
+                    <p class="project-desc">Full-stack security agency platform with real-time guard tracking, multi-login systems, and SaaS operations for manned guarding, mobile patrols, and alarm response teams.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">Google Maps</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">Cron Jobs</span>
+                        <span class="project-tag">Real-Time APIs</span>
+                        <span class="project-tag">AJAX</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://bootssecurity.ca" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View Live</a>
+                        <span style="font-size:0.75rem;color:var(--text-light);">SaaS · Canada</span>
+                    </div>
+                </div>
             </div>
-            <div class="contact-form">
+
+            <!-- Ecommerce Management -->
+            <div class="project-card" data-category="ecommerce">
+                <div class="project-banner green"></div>
+                <div class="project-body">
+                    <div class="project-icon green"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="project-period">Feb 2024 – Mar 2024 · HindtechItSolutions</div>
+                    <div class="project-name">Ecommerce Management</div>
+                    <div class="project-company">Amit Enterprises Daliganj</div>
+                    <p class="project-desc">Complete e-commerce management platform with product display, real-time order tracking, delivery management, advanced admin panel filters, and instant push notifications.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Firebase Notifications</span>
+                        <span class="project-tag">Order Tracking</span>
+                        <span class="project-tag">Admin Panel</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://amitenterprisesdaliganj.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View Live</a>
+                        <span style="font-size:0.75rem;color:var(--text-light);">E-Commerce</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pujari Ji -->
+            <div class="project-card" data-category="saas">
+                <div class="project-banner amber"></div>
+                <div class="project-body">
+                    <div class="project-icon amber"><i class="fas fa-om"></i></div>
+                    <div class="project-period">Oct 2023 – Dec 2023 · HindtechItSolutions</div>
+                    <div class="project-name">Pujari Ji</div>
+                    <div class="project-company">Spiritual Services App · Google Play</div>
+                    <p class="project-desc">Holistic spiritual app offering online/offline Pooja rituals, personalized astrology, Katha Vachak narrations, Kundali analysis, temple services, Pooja materials, and Panchang.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Mobile API</span>
+                        <span class="project-tag">Booking System</span>
+                        <span class="project-tag">Notifications</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://play.google.com" target="_blank" class="project-link"><i class="fab fa-google-play"></i> Google Play</a>
+                        <span style="font-size:0.75rem;color:var(--text-light);">Mobile App</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Appointment -->
+            <div class="project-card" data-category="saas">
+                <div class="project-banner teal"></div>
+                <div class="project-body">
+                    <div class="project-icon teal"><i class="fas fa-stethoscope"></i></div>
+                    <div class="project-period">Aug 2023 – Aug 2023 · Mind You Infotech</div>
+                    <div class="project-name">Doctor Appointment</div>
+                    <div class="project-company">Healthcare Booking Platform</div>
+                    <p class="project-desc">Appointment booking system for Regular & Specialist doctors with slot management, booking/cancellation/reschedule notifications, and Laravel queue for bulk operations.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">Queue / Jobs</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Notifications</span>
+                        <span class="project-tag">Slot Management</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-link" style="cursor:default;"><i class="fas fa-hospital"></i> Healthcare</span>
+                        <span style="font-size:0.75rem;color:var(--text-light);">Laravel Queues</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CRM -->
+            <div class="project-card" data-category="saas">
+                <div class="project-banner purple"></div>
+                <div class="project-body">
+                    <div class="project-icon purple"><i class="fas fa-users-cog"></i></div>
+                    <div class="project-period">Feb 2023 – Apr 2023 · Mind You Infotech</div>
+                    <div class="project-name">CRM Platform</div>
+                    <div class="project-company">Enterprise Office Management</div>
+                    <p class="project-desc">Full-featured CRM with HR, accounts, billing, and employee management. Section-based role management with a centralized admin panel controlling all modules.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">Laravel Modules</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Role-Based Auth</span>
+                        <span class="project-tag">HR & Billing</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-link" style="cursor:default;"><i class="fas fa-chart-line"></i> CRM</span>
+                        <span style="font-size:0.75rem;color:var(--text-light);">Enterprise SaaS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community App -->
+            <div class="project-card" data-category="community">
+                <div class="project-banner red"></div>
+                <div class="project-body">
+                    <div class="project-icon red"><i class="fas fa-people-group"></i></div>
+                    <div class="project-period">Dec 2022 – Feb 2023 · Mind You Infotech</div>
+                    <div class="project-name">Community Platform</div>
+                    <div class="project-company">Social & Community Application</div>
+                    <p class="project-desc">Feature-rich community app: news, events, blood donation, forum, job portal, birthday/marriage/matrimony management, social posts with 200+ APIs and Firebase notifications.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">200+ APIs</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">CRM</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-link" style="cursor:default;"><i class="fas fa-network-wired"></i> Community</span>
+                        <span style="font-size:0.75rem;color:var(--text-light);">200+ APIs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Short-X -->
+            <div class="project-card" data-category="ecommerce">
+                <div class="project-banner green"></div>
+                <div class="project-body">
+                    <div class="project-icon green"><i class="fab fa-whatsapp"></i></div>
+                    <div class="project-period">Sep 2023 – Sep 2023 · Mind You Infotech</div>
+                    <div class="project-name">Short-X</div>
+                    <div class="project-company">Vendor Stock & Order Management</div>
+                    <p class="project-desc">Vendor management tool allowing stock tracking and instant reorder via WhatsApp or call. One-click reminder to distributors. All business logic and APIs built from scratch.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">HTML5</span>
+                        <span class="project-tag">WhatsApp API</span>
+                        <span class="project-tag">Stock Management</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-link" style="cursor:default;"><i class="fas fa-boxes"></i> Inventory</span>
+                        <span style="font-size:0.75rem;color:var(--text-light);">Client Delivered</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Management -->
+            <div class="project-card" data-category="saas">
+                <div class="project-banner blue"></div>
+                <div class="project-body">
+                    <div class="project-icon blue"><i class="fas fa-tasks"></i></div>
+                    <div class="project-period">Sep 2023 – Sep 2023 · Mind You Infotech</div>
+                    <div class="project-name">Project Management</div>
+                    <div class="project-company">Internal Task & QR System</div>
+                    <p class="project-desc">Task management platform with bulk assignment, QR-code-based task scanning for employees, and repeat task scheduling. Employees update task status via self-generated QR codes.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">QR Code</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Bulk Assignment</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-link" style="cursor:default;"><i class="fas fa-qrcode"></i> Task Mgmt</span>
+                        <span style="font-size:0.75rem;color:var(--text-light);">Laravel</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Counselor -->
+            <div class="project-card" data-category="community">
+                <div class="project-banner purple"></div>
+                <div class="project-body">
+                    <div class="project-icon purple"><i class="fas fa-comments"></i></div>
+                    <div class="project-period">Jul 2022 – Sep 2022 · Mind You Infotech</div>
+                    <div class="project-name">My Counselor</div>
+                    <div class="project-company">Astrology & Counseling App</div>
+                    <p class="project-desc">Counseling platform connecting users with astrologers via voice and chat. Features wallet management, session continuity (start/end/continue), and astrologer availability management.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">Voice & Chat</span>
+                        <span class="project-tag">Wallet</span>
+                        <span class="project-tag">Session Mgmt</span>
+                        <span class="project-tag">MySQL</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-link" style="cursor:default;"><i class="fas fa-star"></i> Astrology</span>
+                        <span style="font-size:0.75rem;color:var(--text-light);">App Store</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Rental -->
+            <div class="project-card" data-category="ecommerce">
+                <div class="project-banner teal"></div>
+                <div class="project-body">
+                    <div class="project-icon teal"><i class="fas fa-car"></i></div>
+                    <div class="project-period">May 2022 – Jul 2022 · Mind You Infotech</div>
+                    <div class="project-name">Car Rental Service</div>
+                    <div class="project-company">Best Self Drive Car Rental In Lucknow</div>
+                    <p class="project-desc">Car and bike rental website with self-drive and driver options, flexible rental duration, and real-time vehicle availability. Booking management for customers and admin.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Booking System</span>
+                        <span class="project-tag">Admin Panel</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-link" style="cursor:default;"><i class="fas fa-car-side"></i> Rental</span>
+                        <span style="font-size:0.75rem;color:var(--text-light);">Lucknow</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+<section id="contact">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Let's Talk</span>
+            <h2>Get In Touch</h2>
+            <p>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-side">
+                <h3>Let's build something great together.</h3>
+                <p>Whether it's a fintech platform, SaaS backend, or API architecture — I bring clean code and practical solutions to every project.</p>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Email</h4>
+                        <a href="mailto:akoffice2026@gmail.com">akoffice2026@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <div class="contact-info-text">
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/backend-developer-amit" target="_blank">linkedin.com/in/backend-developer-amit</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Location</h4>
+                        <span>Prayagraj, Uttar Pradesh, India</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Availability</h4>
+                        <span>Mon–Sat, 10 AM – 7 PM IST</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <h3>Send a Message</h3>
                 <form id="contactForm" action="https://formspree.io/f/xbjndqyv" method="POST">
                     <div id="formMessage" class="form-message"></div>
-                    
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Project inquiry…" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project…" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>Amit Kumar Gupta</h3>
-                    <p>Backend developer specializing in Node.js and Python ecosystems. I build robust, scalable server-side applications with clean, efficient code.</p>
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/backend-developer-amit" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="mailto:akoffice2026@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#about">About Me</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Resume</a></li>
-                    </ul>
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Amit Kumar Gupta</h3>
+                <p>Backend developer specializing in Laravel & PHP, building fintech and SaaS platforms that are secure, scalable, and maintainable.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/backend-developer-amit" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:akoffice2026@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; <span id="year"></span> Amit Kumar Gupta. All rights reserved.</p>
+            <div class="footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Expertise</h4>
+                <ul>
+                    <li><a href="#">Laravel / PHP</a></li>
+                    <li><a href="#">Fintech APIs</a></li>
+                    <li><a href="#">SaaS Platforms</a></li>
+                    <li><a href="#">MySQL Design</a></li>
+                    <li><a href="#">Role-Based Auth</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <div class="copyright">
+            <p>&copy; <span id="year"></span> Amit Kumar Gupta. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+<a href="#" class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></a>
 
-    <script>
-        // Back to Top Button
-        const backToTop = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('active');
-            } else {
-                backToTop.classList.remove('active');
+<script>
+    // Back to top
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+        backTop.classList.toggle('show', window.pageYOffset > 300);
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const id = a.getAttribute('href');
+            if (id === '#') return;
+            const el = document.querySelector(id);
+            if (el) {
+                e.preventDefault();
+                window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' });
             }
         });
-        
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+    });
+
+    // Project filter
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            filterTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const filter = tab.dataset.filter;
+            projectCards.forEach(card => {
+                const match = filter === 'all' || card.dataset.category === filter;
+                card.style.display = match ? 'flex' : 'none';
+                card.style.opacity = match ? '1' : '0';
             });
         });
-        
-      // Form submission with Formspree
-        const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('formMessage');
-        const submitBtn = document.getElementById('submitBtn');
-        
-        if (contactForm) {
-            contactForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                // Change button text and disable it
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.disabled = true;
-                
-                try {
-                    const response = await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: new FormData(contactForm),
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-                    
-                    if (response.ok) {
-                        formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-                        formMessage.className = 'form-message success';
-                        contactForm.reset();
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                } catch (error) {
-                    formMessage.textContent = 'Oops! There was a problem sending your message. Please try again later or email me directly at akoffice2026@gmail.com';
-                    formMessage.className = 'form-message error';
-                } finally {
-                    submitBtn.innerHTML = 'Send Message';
-                    submitBtn.disabled = false;
-                    
-                    // Scroll to the message
-                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    // Hide message after 5 seconds
-                    setTimeout(() => {
-                        formMessage.style.display = 'none';
-                    }, 10000);
-                }
-            });
-        }
-    </script>
+    });
+
+    // Contact form
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMessage');
+    const btn = document.getElementById('submitBtn');
+
+    if (form) {
+        form.addEventListener('submit', async e => {
+            e.preventDefault();
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+            btn.disabled = true;
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    msg.textContent = '✓ Message sent! I\'ll get back to you soon.';
+                    msg.className = 'form-message success';
+                    form.reset();
+                } else throw new Error();
+            } catch {
+                msg.textContent = '✗ Something went wrong. Email me at akoffice2026@gmail.com';
+                msg.className = 'form-message error';
+            } finally {
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                btn.disabled = false;
+                msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => { msg.style.display = 'none'; }, 10000);
+            }
+        });
+    }
+</script>
 </body>
 </html>
